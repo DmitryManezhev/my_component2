@@ -1,0 +1,376 @@
+/* Стили для компонента тарифов мониторинга */
+
+/* ===== ОБЩИЕ СТИЛИ ===== */
+.tariffs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.tariff-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 25px;
+    background: #fff;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tariff-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.tariff-card:hover {
+    box-shadow: 0 8px 32px rgba(0,123,255,0.15);
+    transform: translateY(-3px);
+}
+
+.tariff-card:hover::before {
+    transform: scaleX(1);
+}
+
+.tariff-card__img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tariff-card__title { 
+    font-size: 24px; 
+    margin: 0 0 10px;
+    color: #333;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.tariff-card__price { 
+    font-size: 28px; 
+    font-weight: 700; 
+    color: #007bff;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.tariff-card__text { 
+    font-size: 15px; 
+    line-height: 1.6; 
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.tariff-detail__props {
+    margin-bottom: 20px;
+    font-size: 14px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.tariff-detail__props p {
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+.tariff-detail__props strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* ===== ДЕТАЛЬНАЯ СТРАНИЦА ===== */
+.tariff-detail {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.tariff-detail__nav {
+    margin-bottom: 30px;
+}
+
+.btn--back {
+    font-size: 14px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #007bff;
+    color: #007bff;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.btn--back:hover {
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+}
+
+.tariff-detail__content {
+    display: grid;
+    gap: 40px;
+}
+
+.tariff-detail__title {
+    font-size: 42px;
+    margin: 0 0 30px;
+    color: #333;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+}
+
+.tariff-detail__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.tariff-detail__image-block {
+    position: relative;
+}
+
+.tariff-detail__image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.tariff-detail__info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.tariff-detail__price-block {
+    text-align: center;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 30px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tariff-detail__price-block::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(200%) rotate(45deg); }
+}
+
+.tariff-detail__price {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.tariff-detail__price-unit {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.tariff-detail__description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+    text-align: center;
+}
+
+/* ===== БЛОК ПОКУПКИ ===== */
+.tariff-buy-section {
+    background: linear-gradient(135deg, #28a745, #20a039);
+    color: white;
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 12px 48px rgba(40,167,69,0.2);
+}
+
+.quantity-selection {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.quantity-label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.quantity-btn {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.quantity-btn:hover {
+    background: white;
+    color: #28a745;
+    transform: scale(1.05);
+}
+
+.quantity-btn:active {
+    transform: scale(0.95);
+}
+
+.quantity-field {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    background: white;
+    color: #333;
+    outline: none;
+}
+
+.quantity-info {
+    text-align: center;
+}
+
+.total-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.total-amount {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.purchase-actions {
+    text-align: center;
+}
+
+.btn--purchase {
+    font-size: 20px;
+    padding: 18px 40px;
+    border-radius: 12px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    background: white;
+    color: #28a745;
+    border: 2px solid white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn--purchase:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    text-decoration: none;
+    color: #1e7e34;
+}
+
+.purchase-benefits {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===== ХАРАКТЕРИСТИКИ ===== */
+.tariff-detail__characteristics,
+.tariff-detail__costs,
+.tariff-detail__package,
+.tariff-detail__description-full {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+
+.tariff-detail__characteristics h3,
+.tariff-detail__costs h3,
+.tariff-detail__package h3,
+.tariff-detail__description-full h3 {
+    margin: 0 0 25px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 12px;
+}
+
+.characteristics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-
