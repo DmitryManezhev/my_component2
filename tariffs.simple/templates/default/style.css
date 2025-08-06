@@ -1,0 +1,533 @@
+/* ===== ОБЩИЕ СТИЛИ ТАРИФОВ В СТИЛЕ ASPRO ===== */
+
+/* Список тарифов */
+.tariffs-catalog .catalog-block__items {
+    margin-bottom: 30px;
+}
+
+.tariffs-catalog .grid-list__item {
+    margin-bottom: 30px;
+}
+
+.tariffs-catalog .item-wrapper {
+    border: 1px solid var(--border-color, #e8ecf0);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.tariffs-catalog .item-wrapper:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+    border-color: var(--theme-color-text, #007bff);
+}
+
+/* Изображения */
+.tariffs-catalog .catalog-adaptive__img-wrapper {
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.tariffs-catalog .catalog-adaptive__img-wrapper__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tariffs-catalog .item-wrapper:hover .catalog-adaptive__img-wrapper__img {
+    transform: scale(1.05);
+}
+
+/* Контент карточки */
+.tariffs-catalog .catalog-adaptive__content {
+    padding: 25px;
+}
+
+.tariffs-catalog .catalog-adaptive__title {
+    margin-bottom: 15px;
+}
+
+.tariffs-catalog .catalog-adaptive__title a {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--theme-color-text, #333);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.tariffs-catalog .catalog-adaptive__title a:hover {
+    color: var(--theme-color-text, #007bff);
+    text-decoration: none;
+}
+
+/* Превью текст */
+.tariffs-catalog .catalog-adaptive__text {
+    margin-bottom: 15px;
+}
+
+.tariffs-catalog .catalog-adaptive__text .text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Характеристики в списке */
+.tariffs-catalog .catalog-adaptive__props {
+    margin-bottom: 20px;
+}
+
+.tariffs-catalog .props-list {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.tariffs-catalog .props-item {
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+.tariffs-catalog .props-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.tariffs-catalog .props-value {
+    color: #666;
+}
+
+/* Нижний блок с ценой и кнопками */
+.tariffs-catalog .catalog-block__info-bottom {
+    margin-top: auto;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.tariffs-catalog .catalog-adaptive__price-block {
+    margin-bottom: 15px;
+}
+
+.tariffs-catalog .price-current .price {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--theme-color-text, #007bff);
+}
+
+/* Кнопки */
+.tariffs-catalog .catalog-adaptive__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tariffs-catalog .btn-wrapper {
+    width: 100%;
+}
+
+.tariffs-catalog .catalog-wide-button {
+    width: 100%;
+    min-width: 0;
+}
+
+/* Состояния кнопок корзины */
+.tariffs-catalog .item-action--basket.active .to_cart {
+    display: none;
+}
+
+.tariffs-catalog .item-action--basket.active + .in_cart {
+    display: flex !important;
+}
+
+.tariffs-catalog .item-action--basket:not(.active) + .in_cart {
+    display: none !important;
+}
+
+/* Стикеры */
+.tariffs-catalog .stickers {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 5;
+}
+
+.tariffs-catalog .sticker {
+    padding: 5px 10px;
+    background: rgba(220, 53, 69, 0.9);
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* ===== ДЕТАЛЬНАЯ СТРАНИЦА ТАРИФА ===== */
+
+.tariff-detail {
+    padding: 30px 0;
+}
+
+/* Блок изображения */
+.catalog-detail__image-block {
+    margin-bottom: 30px;
+}
+
+.catalog-detail__image-wrapper {
+    border: 1px solid var(--border-color, #e8ecf0);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.catalog-detail__image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Информационный блок */
+.catalog-detail__info-block {
+    padding-left: 30px;
+}
+
+.catalog-detail__title {
+    margin-bottom: 20px;
+    color: var(--theme-color-text, #333);
+}
+
+.catalog-detail__preview-text {
+    margin-bottom: 25px;
+}
+
+.catalog-detail__preview-text .text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+}
+
+/* Блок цены */
+.catalog-detail__price-block {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--theme-color-text, #007bff), var(--theme-color-text-dark, #0056b3));
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+}
+
+.catalog-detail__price-block .price {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.catalog-detail__price-block .price-unit {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Блок покупки */
+.catalog-detail__buy-block {
+    background: linear-gradient(135deg, #28a745, #20a039);
+    color: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 12px 48px rgba(40,167,69,0.2);
+}
+
+/* Количество */
+.quantity-block {
+    margin-bottom: 25px;
+}
+
+.quantity-wrapper {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.quantity-label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.quantity-btn {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.quantity-btn:hover {
+    background: white;
+    color: #28a745;
+    transform: scale(1.05);
+}
+
+.quantity-btn:active {
+    transform: scale(0.95);
+}
+
+.quantity-field {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    background: white;
+    color: #333;
+    outline: none;
+}
+
+/* Итоговая стоимость */
+.total-cost {
+    text-align: center;
+}
+
+.total-label {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.total-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.total-amount {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+/* Кнопки действий */
+.actions-block {
+    text-align: center;
+}
+
+.catalog-detail__buy-block .btn {
+    font-size: 20px;
+    padding: 18px 40px;
+    border-radius: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    background: white;
+    color: #28a745;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.catalog-detail__buy-block .btn:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    color: #1e7e34;
+    text-decoration: none;
+}
+
+/* Табы */
+.catalog-detail__tabs-wrapper {
+    margin-top: 50px;
+}
+
+.catalog-detail__tabs {
+    border-bottom: 2px solid var(--border-color, #e8ecf0);
+    margin-bottom: 30px;
+}
+
+.catalog-detail__tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.catalog-detail__tabs .nav-link.active,
+.catalog-detail__tabs .nav-link:hover {
+    color: var(--theme-color-text, #007bff);
+    border-bottom-color: var(--theme-color-text, #007bff);
+    background: none;
+}
+
+/* Содержимое табов */
+.catalog-detail__tab-content {
+    padding: 30px 0;
+}
+
+.tab-pane {
+    background: #fff;
+    border: 1px solid var(--border-color, #e8ecf0);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+
+/* Таблицы характеристик и стоимости */
+.characteristics-table .table,
+.costs-table .table {
+    margin-bottom: 0;
+}
+
+.characteristics-table .table td,
+.costs-table .table td {
+    padding: 15px 20px;
+    border-top: 1px solid var(--border-color, #e8ecf0);
+    font-size: 15px;
+}
+
+.characteristics-table .char-name,
+.costs-table .cost-name {
+    font-weight: 600;
+    color: #333;
+    width: 40%;
+}
+
+.characteristics-table .char-value,
+.costs-table .cost-value {
+    color: #666;
+}
+
+.costs-table .table-active td {
+    background-color: var(--theme-color-light, rgba(0, 123, 255, 0.1));
+    color: var(--theme-color-text, #007bff);
+}
+
+/* Описание пакета */
+.package-content {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.package-content h3,
+.package-content h4 {
+    color: var(--theme-color-text, #333);
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.package-content ul,
+.package-content ol {
+    padding-left: 20px;
+}
+
+.package-content li {
+    margin-bottom: 8px;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+
+@media (max-width: 991px) {
+    .catalog-detail__info-block {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tariffs-catalog .catalog-adaptive__content {
+        padding: 20px;
+    }
+    
+    .tariffs-catalog .catalog-adaptive__buttons {
+        flex-direction: column;
+    }
+    
+    .catalog-detail__buy-block {
+        padding: 20px;
+    }
+    
+    .quantity-wrapper {
+        padding: 20px;
+    }
+    
+    .quantity-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .quantity-field {
+        width: 80px;
+    }
+    
+    .catalog-detail__tabs .nav-link {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .tab-pane {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tariffs-catalog .item-wrapper {
+        border-radius: 8px;
+    }
+    
+    .tariffs-catalog .catalog-adaptive__content {
+        padding: 15px;
+    }
+    
+    .tariffs-catalog .catalog-adaptive__title a {
+        font-size: 18px;
+    }
+    
+    .tariffs-catalog .price-current .price {
+        font-size: 24px;
+    }
+    
+    .catalog-detail__price-block .price {
+        font-size: 36px;
+    }
+    
+    .catalog-detail__buy-block .btn {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+    
+    .catalog-detail__tabs {
+        flex-wrap: wrap;
+    }
+    
+    .catalog-detail__tabs .nav-link {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
